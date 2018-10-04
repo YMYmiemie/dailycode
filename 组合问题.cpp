@@ -34,11 +34,11 @@ void combination(int i, int n, int* com, int count, int k)
 		if (count < k)   //找齐一个组合的过程
 		{
 			com[count] = i;
-			combination(++i, n, com, ++count, k);
+			combination(i + 1, n, com, count + 1, k);
 		}
 		//if (com[k-1] <= n)
 		//{
-			combination(i, n, com, --count, k);
+			combination(i + 1, n, com, count, k);
 		//}
 		//combination(com[0] + 1, n, com, 0, k);
 	}
