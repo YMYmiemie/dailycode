@@ -16,7 +16,7 @@ int main()
 
 void combination(int i, int n, int* com, int count, int k)
 {
-	if (count == k)       //判断找到一个组合后输出
+	if (count == k)       //鍒ゆ柇鎵惧埌涓�涓粍鍚堝悗杈撳嚭
 	{
 		for (int c(0); c < k; c++)
 		{
@@ -31,15 +31,15 @@ void combination(int i, int n, int* com, int count, int k)
 	}
 	else
 	{
-		if (count < k)   //找齐一个组合的过程
+		if (count < k)   //鎵鹃綈涓�涓粍鍚堢殑杩囩▼
 		{
 			com[count] = i;
 			combination(++i, n, com, ++count, k);
 		}
-		if (com[k-1] <= n)
-		{
+		//if (com[k-1] <= n)
+		//{
 			combination(i, n, com, --count, k);
-		}
-		combination(com[0] + 1, n, com, 0, k);
+		//}
+		//combination(com[0] + 1, n, com, 0, k);
 	}
 }
